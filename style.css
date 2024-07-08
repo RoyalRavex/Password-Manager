@@ -1,0 +1,567 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, rgba(67, 34, 173, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    color: #ecf0f1;
+    margin: 0;
+    padding: 20px;
+}
+h1, h2 {
+    text-align: center;
+    color: #ecf0f1;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #2c2c54; /* Dark container background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.section {
+    margin-bottom: 20px;
+}
+.section h2 {
+    background: #4834d4; /* Purple section headers */
+    padding: 10px;
+    border-radius: 5px;
+}
+.item {
+    background: #575fcf; /* Light purple items */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    word-break: break-all;
+    cursor: pointer;
+    position: relative;
+}
+.item:nth-child(even) {
+    background: #4b4b9f; /* Slightly different purple for even items */
+}
+.item:active {
+    background: #1abc9c; /* Green active item */
+}
+.hidden {
+    display: none;
+}
+.add-form {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.add-form input, .add-form button, .add-form select {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    flex: 1 1 auto;
+    min-width: 200px;
+}
+.add-form input {
+    background: #3d3d70; /* Dark input background */
+    color: #ecf0f1; /* Light input text */
+    border: 1px solid #575fcf; /* Light purple border */
+}
+.add-form button {
+    background: #4834d4; /* Purple button */
+    color: #ecf0f1;
+    cursor: pointer;
+}
+.add-form button:hover {
+    background: #1abc9c; /* Green button on hover */
+}
+.add-form select {
+    background: #3d3d70; /* Dark input background */
+    color: #ecf0f1; /* Light input text */
+    border: 1px solid #575fcf; /* Light purple border */
+    appearance: none; /* Remove default styling */
+    -webkit-appearance: none; /* Remove default styling for Safari */
+    padding: 10px; /* Padding for dropdown */
+    border-radius: 5px; /* Rounded corners for dropdown */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23ecf0f1" d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px 12px;
+}
+.add-form select option {
+    background: #2c2c54; /* Dark background for options */
+    color: #ecf0f1; /* Light text for options */
+    padding: 10px; /* Padding for options */
+}
+.add-form select:hover {
+    background: #575fcf; /* Change background on hover */
+}
+.add-form select:focus {
+    border-color: #1abc9c; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+.add-form select::-ms-expand {
+    display: none; /* Remove default dropdown arrow in IE */
+}
+.download-button {
+    display: block;
+    width: 200px;
+    margin: 0 auto 20px auto;
+    padding: 10px;
+    background-color: #4834d4; /* Purple button */
+    color: #ecf0f1;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.download-button:hover {
+    background-color: #1abc9c; /* Green button on hover */
+}
+/* Custom alert box styling */
+.alert-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+.alert-box.success {
+    background-color: #1abc9c;
+}
+.alert-box.error {
+    background-color: #e74c3c;
+}
+.alert-box.info {
+    background-color: #3498db;
+}
+.alert-box .close-btn {
+    margin-left: 20px;
+    cursor: pointer;
+}
+.login-container {
+    max-width: 300px;
+    margin: 100px auto;
+    background: #2c2c54;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.login-container input, .login-container button {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.login-container input {
+    background: #3d3d70;
+    color: #ecf0f1;
+    border: 1px solid #575fcf;
+}
+.login-container button {
+    background: #4834d4;
+    color: #ecf0f1;
+    cursor: pointer;
+}
+.login-container button:hover {
+    background: #1abc9c;
+}
+
+
+/*new code */
+body {
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, rgba(67, 34, 173, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    color: #ecf0f1;
+    margin: 0;
+    padding: 20px;
+}
+h1, h2 {
+    text-align: center;
+    color: #ecf0f1;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #2c2c54; /* Dark container background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.section {
+    margin-bottom: 20px;
+}
+.section h2 {
+    background: #4834d4; /* Purple section headers */
+    padding: 10px;
+    border-radius: 5px;
+}
+.item {
+    background: #575fcf; /* Light purple items */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    word-break: break-all;
+    cursor: pointer;
+    position: relative;
+}
+.item:nth-child(even) {
+    background: #4b4b9f; /* Slightly different purple for even items */
+}
+.item:active {
+    background: #1abc9c; /* Green active item */
+}
+.hidden {
+    display: none;
+}
+.add-form {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.add-form input, .add-form button, .add-form select {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    flex: 1 1 auto;
+    min-width: 200px;
+}
+.add-form input {
+    background: #3d3d70; /* Dark input background */
+    color: #ecf0f1; /* Light input text */
+    border: 1px solid #575fcf; /* Light purple border */
+}
+.add-form button {
+    background: #4834d4; /* Purple button */
+    color: #ecf0f1;
+    cursor: pointer;
+}
+.add-form button:hover {
+    background: #1abc9c; /* Green button on hover */
+}
+.add-form select {
+    background: #3d3d70; /* Dark input background */
+    color: #ecf0f1; /* Light input text */
+    border: 1px solid #575fcf; /* Light purple border */
+    appearance: none; /* Remove default styling */
+    -webkit-appearance: none; /* Remove default styling for Safari */
+    padding: 10px; /* Padding for dropdown */
+    border-radius: 5px; /* Rounded corners for dropdown */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23ecf0f1" d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px 12px;
+}
+.add-form select option {
+    background: #2c2c54; /* Dark background for options */
+    color: #ecf0f1; /* Light text for options */
+    padding: 10px; /* Padding for options */
+}
+.add-form select:hover {
+    background: #575fcf; /* Change background on hover */
+}
+.add-form select:focus {
+    border-color: #1abc9c; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+.add-form select::-ms-expand {
+    display: none; /* Remove default dropdown arrow in IE */
+}
+.download-button {
+    display: block;
+    width: 200px;
+    margin: 0 auto 20px auto;
+    padding: 10px;
+    background-color: #4834d4; /* Purple button */
+    color: #ecf0f1;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.download-button:hover {
+    background-color: #1abc9c; /* Green button on hover */
+}
+/* Custom alert box styling */
+.alert-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+.alert-box.success {
+    background-color: #1abc9c;
+}
+.alert-box.error {
+    background-color: #e74c3c;
+}
+.alert-box.info {
+    background-color: #3498db;
+}
+.alert-box .close-btn {
+    margin-left: 20px;
+    cursor: pointer;
+}
+.login-container {
+    max-width: 300px;
+    margin: 100px auto;
+    background: #2c2c54;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.login-container input, .login-container button {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.login-container input {
+    background: #3d3d70;
+    color: #ecf0f1;
+    border: 1px solid #575fcf;
+}
+.login-container button {
+    background: #4834d4;
+    color: #ecf0f1;
+    cursor: pointer;
+}
+.login-container button:hover {
+    background: #1abc9c;
+}
+.title-with-icons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.title-with-icons .icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+/*new code 2*/
+body {
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, rgba(67, 34, 173, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    color: #ecf0f1;
+    margin: 0;
+    padding: 20px;
+}
+h1, h2 {
+    text-align: center;
+    color: #ecf0f1;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #2c2c54; /* Dark container background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.section {
+    margin-bottom: 20px;
+}
+.section h2 {
+    background: #4834d4; /* Purple section headers */
+    padding: 10px;
+    border-radius: 5px;
+}
+.item {
+    background: #575fcf; /* Light purple items */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    word-break: break-all;
+    cursor: pointer;
+    position: relative;
+}
+.item:nth-child(even) {
+    background: #4b4b9f; /* Slightly different purple for even items */
+}
+.item:active {
+    background: #1abc9c; /* Green active item */
+}
+.hidden {
+    display: none;
+}
+.add-form {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.add-form input, .add-form button, .add-form select {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    flex: 1 1 auto;
+    min-width: 200px;
+}
+.add-form input {
+    background: #3d3d70; /* Dark input background */
+    color: #ecf0f1; /* Light input text */
+    border: 1px solid #575fcf; /* Light purple border */
+}
+.add-form button {
+    background: #4834d4; /* Purple button */
+    color: #ecf0f1;
+    cursor: pointer;
+}
+.add-form button:hover {
+    background: #1abc9c; /* Green button on hover */
+}
+.add-form select {
+    background: #3d3d70; /* Dark input background */
+    color: #ecf0f1; /* Light input text */
+    border: 1px solid #575fcf; /* Light purple border */
+    appearance: none; /* Remove default styling */
+    -webkit-appearance: none; /* Remove default styling for Safari */
+    padding: 10px; /* Padding for dropdown */
+    border-radius: 5px; /* Rounded corners for dropdown */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23ecf0f1" d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px 12px;
+}
+.add-form select option {
+    background: #2c2c54; /* Dark background for options */
+    color: #ecf0f1; /* Light text for options */
+    padding: 10px; /* Padding for options */
+}
+.add-form select:hover {
+    background: #575fcf; /* Change background on hover */
+}
+.add-form select:focus {
+    border-color: #1abc9c; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+.add-form select::-ms-expand {
+    display: none; /* Remove default dropdown arrow in IE */
+}
+.download-button {
+    display: block;
+    width: 200px;
+    margin: 0 auto 20px auto;
+    padding: 10px;
+    background-color: #4834d4; /* Purple button */
+    color: #ecf0f1;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.download-button:hover {
+    background-color: #1abc9c; /* Green button on hover */
+}
+/* Custom alert box styling */
+.alert-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+.alert-box.success {
+    background-color: #1abc9c;
+}
+.alert-box.error {
+    background-color: #e74c3c;
+}
+.alert-box.info {
+    background-color: #3498db;
+}
+.alert-box .close-btn {
+    margin-left: 20px;
+    cursor: pointer;
+}
+.login-container {
+    max-width: 300px;
+    margin: 100px auto;
+    background: #2c2c54;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.login-container input, .login-container button {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.login-container input {
+    background: #3d3d70;
+    color: #ecf0f1;
+    border: 1px solid #575fcf;
+}
+.login-container button {
+    background: #4834d4;
+    color: #ecf0f1;
+    cursor: pointer;
+}
+.login-container button:hover {
+    background: #1abc9c;
+}
+/* Styling for title and icons */
+.title-with-icons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.icon {
+    width: 32px;
+    height: 32px;
+    fill: #ecf0f1; /* Default icon color */
+    filter: drop-shadow(0 0 6px #ff7700);
+
+}
+.icon:hover {
+    fill: #1abc9c; /* Change icon color on hover */
+    filter: drop-shadow(0 0 6px #1abc9c); /* Add glow effect on hover */
+}
